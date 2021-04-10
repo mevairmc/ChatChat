@@ -1,0 +1,34 @@
+{
+  "name": "chatchat",
+  "version": "1.0.0",
+  "description": "Real Chat application",
+  "main": "server.js",
+  "scripts": {
+    "start": "noder server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mevairmc/ChatChat.git"
+  },
+  "keywords": [
+    "sockets",
+    "javascript",
+    "express",
+    "node"
+  ],
+  "author": "Evair Macollunco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mevairmc/ChatChat/issues"
+  },
+  "homepage": "https://github.com/mevairmc/ChatChat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "socket.io": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
