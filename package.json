@@ -4,7 +4,7 @@
   "description": "Real Chat application",
   "main": "server.js",
   "scripts": {
-    "start": "noder server",
+    "start": "node server",
     "dev": "nodemon server"
   },
   "repository": {
