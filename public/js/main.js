@@ -1,4 +1,12 @@
 const chatForm = document.getElementById('chat-form');
+const chatMessages = document.querySelector('.chat-messages');
+
+//get username and Room
+
+const {username, room} = Qs.parse(location.search,{
+  ignoreQueryPrefix: true
+});
+
 
 const socket = io();
 
@@ -6,6 +14,9 @@ const socket = io();
 socket.on('message', message => {
   console.log(message)
   outputMessage(message)
+
+  //Scroll down
+  chatMessages.scrollTop = chatMessages.scrollHeight
 })
 
 //Message Subimit:
@@ -16,15 +27,19 @@ chatForm.addEventListener('submit', (e) => {
 
   //Emit message to the server
   socket.emit('chatMessage', msg);
+
+  // Clear input and keep writting
+  e.target.elements.msg.value = ""
+  e.target.elements.msg.focus();
 })
 
 //Ouput message to DOM
 function outputMessage(message){
   const div = document.createElement('div');
   div.classList.add('message');
-  div.innerHTML =`<p class="meta">Evair <span>9:15pm</span></p>
+  div.innerHTML =`<p class="meta">${message.username}<span>${message.time}</span></p>
   <p class="text">
-    ${message}
+    ${message.text}
   </p>`;
   document.querySelector('.chat-messages').appendChild(div);
 }
