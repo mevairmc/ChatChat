@@ -10,9 +10,11 @@ const {username, room} = Qs.parse(location.search,{
 
 const socket = io();
 
+socket.emit('joinRoom', {username, room});
+
+
 //Message server
 socket.on('message', message => {
-  console.log(message)
   outputMessage(message)
 
   //Scroll down
