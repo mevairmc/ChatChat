@@ -18,11 +18,16 @@ io.on('connection', socket => {
   //Broadcast wehena  suer connects
 
   socket.broadcast.emit('message','A user has joined to the chat');
- 
+
   //Run when client disconnects
   socket.on('disconnect', () => {
     io.emit('message', 'A user has left the chat');
   });
+
+  //Listen for chatMessage
+  socket.on('chatMessage', (msg) => {
+    io.emit('message',msg);
+  })
 });
 
 const PORT = 3000 ||process.env.PORT;
