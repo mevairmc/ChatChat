@@ -16,14 +16,14 @@ Nodemon(dev)
 
 ## How to Start
 
-1. Clone the project in your local: \n\n
+1. Clone the project in your local: </br></br>
     <code> git clone git@github.com:mevairmc/ChatChat.git</code>
 
-2. Run: \n\n
+2. Run: </br></br>
     <code> npm install </code>
 
-3. Last run:\n\n
+3. Last run:</br></br>
     <code> npm run start </code>
 
-4. Go to your browser and open:\n\n
+4. Go to your browser and open:</br></br>
     <code> http://localhost:3000 </code>
