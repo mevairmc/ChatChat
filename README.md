@@ -6,6 +6,8 @@ In this project you can use a real time chat. You
 JavaScript
 
 ## Other Tecnologies
+HTML
+CSS
 Node
 Express
 Qs
